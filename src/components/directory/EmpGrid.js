@@ -1,6 +1,14 @@
 import React, { useState, useEffect } from "react";
 import API from "../../utils/API";
 import { DataGrid } from "@material-ui/data-grid";
+import Box from "@material-ui/core/Box";
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles(() => ({
+  root: {
+    textOverflow: "none",
+  },
+}));
 
 const columns = [
   { field: "id", headerName: "Emp ID", width: 120 },
@@ -12,10 +20,10 @@ const columns = [
 
 const EmpGrid = () => {
   const [employees, setEmployees] = useState([]);
+  const classes = useStyles();
 
   useEffect(() => {
     loadEmployees();
-    // console.log(employees);
   }, []);
 
   function loadEmployees() {
@@ -37,7 +45,7 @@ const EmpGrid = () => {
   console.table(rows[0]);
 
   return (
-    <div style={{ height: "100%", width: "100%" }}>
+    <Box alignContent="center" style={{ height: "100%", width: "100%" }}>
       <DataGrid
         rows={employees.map((employee) => ({
           id: employee.id.value,
@@ -48,9 +56,9 @@ const EmpGrid = () => {
         }))}
         columns={columns}
         pageSize={10}
-        style={{ color: "black" }}
+        className={classes.root}
       />
-    </div>
+    </Box>
   );
 };
 
