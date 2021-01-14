@@ -31,6 +31,8 @@ npm i
 ## Usage
 People managers can now easily sort and filter their employees to review basic data
 
+![Screenshot of app](./public/screenshot.png)
+
 ## License
 Created under the MIT license. See LICENSE.txt for more information.
 
