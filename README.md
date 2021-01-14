@@ -33,6 +33,8 @@ People managers can now easily sort and filter their employees to review basic d
 
 ![Screenshot of app](public/screenshot.PNG)
 
+![Demo of filter/sort](public/demo.gif)
+
 ## License
 Created under the MIT license. See LICENSE.txt for more information.
 
